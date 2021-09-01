@@ -18,8 +18,9 @@
       .signUp({ username, password })
       .then((user) => (userObject = user)));
 
+  
   const signOut = () =>
-    (authPromise = userbase.signOut).then(() => (userObject = null));
+    (authPromise = userbase.signOut().then(() => (userObject = null)));
 
   let todoPromise;
   let todos = [],
